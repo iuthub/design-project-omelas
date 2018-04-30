@@ -1,0 +1,134 @@
+/*Colors
+
+darker platinium #b88746; c48f4b #c19552
+lighter f1e296 #ffffae
+
+*/
+body {
+	margin:0;
+	font-family: "Open Sans";
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 20px;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	text-transform: translate ease-in-out;
+}
+a:hover{
+	text-decoration: none;
+	color: #b88746
+}
+
+
+.logo{
+	margin-left: 7%;
+}
+.above-header{
+		background-color: #000;
+}
+.header-right{
+	margin-top: 20px;
+	display: inline-block;
+}
+.search a{
+	color: #fff;
+}
+.header-right li{
+	display: inline-block;
+}
+.header-right a{
+	color: #ddd;
+	text-align: right;
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 20px;
+	margin-right: 0px;
+}
+
+.header-right a:hover{
+	color: #b88746;
+
+	
+}
+/**Navbar**/
+
+nav ul {
+	margin-top:18px;
+}
+
+nav ul li{
+	display: inline-block;
+	margin-right: 30px;
+	list-style: none;
+}
+
+nav a {
+	position: relative;
+	display: inline-block;
+	margin: -12px 25px 12px 25px;
+	outline: none;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 400;
+	text-shadow: 0 0 1px rgba(255,255,255,0.3);
+	font-size: 1.35em;
+}
+
+nav a:hover,
+nav a:focus {
+	outline: none;
+}
+
+.navbar-effect a::before,
+.navbar-effect a::after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	border: 2px solid rgba(0,0,0,0.1);
+	border-radius: 50%;
+	content: '';
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+	transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+.navbar-effect a::after {
+	width: 60px;
+	height: 60px;
+	border-width: 6px;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+.navbar-effect a:hover::before,
+.navbar-effect a:hover::after,
+.navbar-effect a:focus::before,
+.navbar-effect a:focus::after {
+	opacity: 1;
+	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+ ul li:nth-child(4){
+	margin-right: 0px;
+}
+/* Read more: ibrahimjabbari.com
+/*END OF HEADER*/
+/*
+BUTTON EFFECTS*/
