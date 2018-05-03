@@ -274,3 +274,421 @@ NEW ARRIVIALS
 	color: #000;
 
 }
+
+
+/* 
+END NEW ARRIVIALS
+*/
+.mens-slider{
+	position: top left;
+	width: 100%;
+	background-color: #000;
+	margin-top: 100px;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+
+}
+
+
+#box3{
+	height: 100vh;
+	width: 100%;
+	background-image: url("../img/armani2.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+FOOTER
+*/
+footer{
+	background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+footer{
+
+	margin:0;
+	width: 100%;
+	height: 65vh;
+	background-image: url("../img/accesories.jpg");
+	background-size: cover;
+	color: #121212;
+	text-align: center;
+
+}
+
+footer h1{
+	margin-top: 100px;
+	font-size: 35px;
+
+}
+footer  p {
+	margin-top: 20px;
+	font-size: 16px;
+}
+
+.sign-up-btn{
+	margin-top: 30px;
+	margin-left: 100px;
+	margin-bottom: 80px;
+	background: #fff;
+	border: 1px solid #ddd;
+	height: 60px;
+	width: 60%;
+	color: #fff;
+}
+.copyright p{
+	text-align: center;
+	color: #fff;
+	background: #b88746;
+	margin:0;
+	margin-top: 20px;
+	height: 50px;
+	padding-bottom: 0;
+	padding-top: 20px;
+}
+form{
+	margin-right: 0;
+}
+footer nav ul{
+	color: transparent;
+	
+
+}
+.email-submit{
+	height: 60px;
+	width: 60px;
+	background:  #b88746;
+	margin-top: 30px;
+	margin-left: 3px;
+}
+.email-submit p{
+	
+	text-align: center;
+	margin-top: 18px;	
+	color: white;
+	z-index: 999;
+	font-weight: 600;
+	font-size: 30px
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+PRODUCT.html
+*/
+
+.product-img{
+	margin-top: 20px;
+	width: 50%;
+	height: 80vh;
+}
+.product-img-next{
+	margin-top: 15px;
+	margin-left: 55px;
+	margin-right: -90px;
+}
+.product-img-next a img:hover{
+background: rgba(255,255,255);
+}
+.product-desc{
+	margin-top: 20px;
+
+}
+.product-desc span{
+color: #b88746;
+font-size: 20px;
+margin-right: 30px;
+}
+
+.product-desc h3{
+	text-transform:uppercase;
+	font-size: 20px;
+	margin-top: 20px;
+	color: #121212;
+	margin-bottom: 5px;
+	text-align: left;
+}
+.product-desc .star{
+	margin-left: 0;
+}
+.product-desc .review{
+	display: inline-block;
+	margin-left: 20px;
+	text-align: left;
+	}
+.product-desc p{
+	margin-right: 30px;
+}
+
+select{
+	width: 200px;
+	height: 30px;
+	margin-left: 0;
+    width: 50%;
+	
+	}
+
+.product-color{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h4{
+text-transform: uppercase;
+font-size: 18px;
+margin-top: 10px;
+}
+
+.color1, .color2, .color3, .color4, .color5, .color6{
+    width: 15px;
+    height: 25px;
+    background: #b88746;
+    margin-right: -25px;
+    margin-left: 29px;
+    margin-top: 6px;} 
+.color1:hover, .color2:hover, .color3:hover, .color4:hover, .color5:hover, .color6:hover{
+	border-radius: 50%;
+	transition-duration: 0.3s; 
+} 
+.color2{
+background: lightgreen;
+}
+.color3{
+background: orange;
+}
+.color4{
+background: lightblue;
+}
+.color5{
+background: lightgrey;
+}
+.color6{
+background: black;
+}
+.black-btn{
+	border: 0px;
+	width: 50%;
+	height: 50px;
+	background: #121212;
+	color: #fff;
+	margin-top: 30px;
+}
+
+.product-details{
+margin-top: 30px;
+}
+ .social-icons p{
+display: inline-block;
+font-size: 24px;
+}
+
+ .social-icons a{
+ 	color: #121212;
+}
+
+ .social-icons  .fa-facebook:hover{
+ 	font-size: 25px;
+ 	color: blue;
+}
+
+ .social-icons  .fa-instagram:hover{
+ 	font-size: 25px;
+ 	color: #b88742;
+}
+ .social-icons  .fa-twitter:hover{
+ 	font-size: 25px;
+ 	color: blue;
+}
+ .social-icons  .fa-vk:hover{
+ 	font-size: 25px;
+ 	color: blue;
+}
+
+.products .product{
+	margin: auto;
+}
+
+.img-big{
+	margin: auto;
+	margin-top: 100px;
+}
+.size p{
+	margin-top: -50px;
+	text-align:center;
+	font-weight: 500;
+	font-size: 14px;
+	font-family: sans-serif;
+
+}
+
+
+/*Signup*/
+
+.input-text{
+border: 1px solid #b88746;
+}
+
+
+
+
+/*CHEKOUT*/
+.border-top {
+ border-top: 1px solid #e5e5e5;
+  }
+.border-bottom {
+ border-bottom: 1px solid #e5e5e5; 
+}
+.border-top-gray { 
+border-top-color: #b88746;
+ }
+.box-shadow {
+ box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+  }
+
+.lh-condensed {
+ line-height: 1.25;
+  }
+.bg-light{
+	margin-top: -16px;
+}
+.bg-light h2{
+	margin-top: -15px;
+	margin-bottom:  -15px;
+
+}
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: black;
+    border: none;
+    border-radius: 0%;
+}
+.btn-primary:hover{
+	background-color: #b88742;
+}
+.btn-primary span{
+	margin-left: 5px;
+	color: white;
+}
+.form-control{
+	border-radius: 0%;
+	border-color: #ddd;
+
+
+}
+.form-control:focus {
+  border-color: #b88742;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.custom-control-label:before{
+  background-color:#ccc;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before{
+  background-color:#b88742;
+}
+
+
+
+
+
+/* TABLE*/
+table{
+	margin-top: 30px;
+	margin-bottom: 100px;
+}
+
+/*END  TABLE*/
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+products category
+*/
+.left-sort{
+	text-align: right;
+}
+.cart-items{
+	border-radius: 0%;
+	background: #fefefe;
+
+}
+.masked{
+	-webkit-clip-path: inset(0 7% 0 7%);
+clip-path: inset(0 7% 0 7%);
+}
+.card-product{
+	margin-bottom: 30px;
+}
+.card-product a{
+color: #b88746;
+}
+
+.cart-btn{
+	margin:60px auto;
+}
+
+
+
+
+
+/*SIDEBAR*/
+.sidebar a{
+	color: #121212;
+	margin-left: -6%;
+	font-size: 16px;
+	margin-top: 100px;
+}
+
+.pagination .page-item a{
+	color: #121212;
+}
+.pagination .active .page-link{
+background:#b88746;
+border-color: #b88746;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
