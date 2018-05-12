@@ -47,11 +47,16 @@ width="430" height="520"
 		</div>
 		<div class="row">
 
-<div class="button_add_cart">
+<div class="button_add_cart col-md-6">
 				<a href="{{route('cart.addItem', $product->id)}}">
 				<center><br><i class="fa fa-shopping-bag">
 				</i> ADD TO CART</center></a>
 </div>
+<div class="offset-6">
+
+</div>
+</div>
+
 	<br>
 				<div class="product-details">
 					<h4>Product Details</h4>
