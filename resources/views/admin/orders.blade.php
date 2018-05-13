@@ -23,24 +23,13 @@
                         <th>Name</th>
                         <th>qty</th>
                         <th>price</th>
-<<<<<<< HEAD
-
-
-                        </address>
-=======
->>>>>>> bc3622f475ec50cdfa608c3896c71e3ca4cafb6d
-                    </tr>
+</tr>
                     @foreach($order->orderItems as $item)
                         <tr>
                             <td>{{$item->name}}</td>
                             <td>{{$item->pivot->qty}}</td>
                             <td>{{$item->pivot->total}}</td>
-<<<<<<< HEAD
 
-
-                        </td>
-=======
->>>>>>> bc3622f475ec50cdfa608c3896c71e3ca4cafb6d
                         </tr>
 
                     @endforeach
