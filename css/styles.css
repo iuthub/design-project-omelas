@@ -54,7 +54,7 @@ a:hover{
 .header-right a:hover{
 	color: #b88746;
 
-	
+
 }
 /**Navbar**/
 
@@ -134,7 +134,7 @@ nav a:focus {
 BUTTON EFFECTS*/
 button{
 height: 40px;
-width: 200px; 
+width: 200px;
 font-size: 16px;
 background:  transparent;
 border: 1px solid #121212;
@@ -230,7 +230,7 @@ NEW ARRIVIALS
 }
 .products{
 	margin:70px 0px 50px 0px;
-	
+
 }
 .star {
 	font-size: 12px;
@@ -276,7 +276,7 @@ NEW ARRIVIALS
 }
 
 
-/* 
+/*
 END NEW ARRIVIALS
 */
 .mens-slider{
@@ -310,7 +310,7 @@ END NEW ARRIVIALS
 
 
 
-/* 
+/*
 FOOTER
 */
 footer{
@@ -365,7 +365,7 @@ form{
 }
 footer nav ul{
 	color: transparent;
-	
+
 
 }
 .email-submit{
@@ -376,9 +376,9 @@ footer nav ul{
 	margin-left: 3px;
 }
 .email-submit p{
-	
+
 	text-align: center;
-	margin-top: 18px;	
+	margin-top: 18px;
 	color: white;
 	z-index: 999;
 	font-weight: 600;
@@ -447,7 +447,7 @@ select{
 	height: 30px;
 	margin-left: 0;
     width: 50%;
-	
+
 	}
 
 .product-color{
@@ -467,11 +467,11 @@ margin-top: 10px;
     background: #b88746;
     margin-right: -25px;
     margin-left: 29px;
-    margin-top: 6px;} 
+    margin-top: 6px;}
 .color1:hover, .color2:hover, .color3:hover, .color4:hover, .color5:hover, .color6:hover{
 	border-radius: 50%;
-	transition-duration: 0.3s; 
-} 
+	transition-duration: 0.3s;
+}
 .color2{
 background: lightgreen;
 }
@@ -542,6 +542,24 @@ font-size: 24px;
 	font-family: sans-serif;
 
 }
+/*
+ABOUT_US*/
+.about-us-content{
+	text-indent: 50px;
+	font-size: 1.3em;
+	line-height: 2;
+}
+.about-us h2{
+margin-bottom: 40px;
+}
+.masked-img1{-webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+.masked-img2{
+	-webkit-clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+.about-us-p{ }
 
 
 /*Signup*/
@@ -558,9 +576,9 @@ border: 1px solid #b88746;
  border-top: 1px solid #e5e5e5;
   }
 .border-bottom {
- border-bottom: 1px solid #e5e5e5; 
+ border-bottom: 1px solid #e5e5e5;
 }
-.border-top-gray { 
+.border-top-gray {
 border-top-color: #b88746;
  }
 .box-shadow {
@@ -679,16 +697,3 @@ color: #b88746;
 background:#b88746;
 border-color: #b88746;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
