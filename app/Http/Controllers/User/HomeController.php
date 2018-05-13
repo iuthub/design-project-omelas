@@ -19,7 +19,11 @@ class HomeController extends Controller
     public function about_us(){
       return view('user.about_us');
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> eec3e5d95b9df1853a25384c1bc3ea7028b17892
     public function products(){
       $products = Product::all();
         return view('user.products', compact('products'));
