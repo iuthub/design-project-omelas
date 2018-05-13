@@ -40,7 +40,7 @@
 
 </div>
 <button class="btn-effect load-more ">
-        LOAD MORE
+        <center>LOAD MORE</center>
 </button>
 </div>
 

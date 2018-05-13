@@ -10,6 +10,7 @@ Route::get('women', 'User\HomeController@women')->name('women');
 Route::get('children', 'User\HomeController@children')->name('children');
 Route::get('shipping', 'User\HomeController@shipping')->name('shipping');
 Route::get('sale', 'User\HomeController@sale')->name('sale');
+Route::get('about_us', 'User\HomeController@about_us')->name('about_us');
 
 
 

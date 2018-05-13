@@ -16,9 +16,10 @@
 						Collection
 						</h1>
 						<p>Sed accumsan posuere eros quis placerat elit..</p>
-						<button class="btn-effect">
-						SHOP NOW
-						</button>
+
+						<a href="{{route('products')}}"> <button class="btn-effect">
+						SHOP NOW</button></a>
+
 					</div>
 					<div class="homepage-img col-md-5 col-sm-5 ">
 						<img src="{{asset('omelas/img/zara1.png') }}">
