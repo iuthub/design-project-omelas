@@ -31,12 +31,10 @@ class HomeController extends Controller
     //   return view('user.men', compact('men'));
     // }
     public function whatsnew(){
-<<<<<<< HEAD
+
       $products = Product::all();
       return view('user.whatsnew', compact('products'));
-=======
-      return view('user.whatsnew');
->>>>>>> bc3622f475ec50cdfa608c3896c71e3ca4cafb6d
+
 
     }
     public function bestsellers(){

@@ -5,7 +5,7 @@
 @section('main-content')
 <h2>Men's page</h2>
 
-<<<<<<< HEAD
+
 <div class="products-section">
 
 
@@ -44,6 +44,4 @@
 </button>
 </div>
 
-=======
->>>>>>> bc3622f475ec50cdfa608c3896c71e3ca4cafb6d
 @endsection
