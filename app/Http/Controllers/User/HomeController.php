@@ -15,13 +15,19 @@ class HomeController extends Controller
       return view('user.index', compact('products'));
 
     }
+
+    public function about_us(){
+      return view('user.about_us');
+    }
+
     public function products(){
       $products = Product::all();
         return view('user.products', compact('products'));
 
     }
     public function product(Product $product){
-      return view('user.product', compact('product'));
+      $products = Product::all();
+      return view('user.product', compact('products'), compact('product'));
 
     }
     // public function men(){
@@ -47,7 +53,8 @@ class HomeController extends Controller
 
     }
     public function women(){
-      return view('user.women');
+      $products = Product::all();
+      return view('user.women',  compact('products'));
 
     }
     public function children(){

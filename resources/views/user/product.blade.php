@@ -28,11 +28,11 @@ width="430" height="520"
 				<p>Choose the Size</p>
 				  <select name="size" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
 				      <option selected>Choose...</option>
-				        <option value="1">XL</option>
-				        <option value="2">SXL</option>
-				        <option value="2">XXL</option>
-				        <option value="2">XXXL</option>
+				        <option value="1">Small</option>
+				        <option value="2">Medium</option>
+				        <option value="2">Large</option>
       			</select>
+
 			</div>
 		</div>
 
@@ -68,9 +68,11 @@ width="430" height="520"
 					<h4>Delivery Information</h4>
 					<hr>
 					<p>
-Pellentesque non ultrices nisi. Ut auctor, massa vel
-hendrerit consectetur, augue mi vestibulum nibh, vitae ull elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut eni varius at arcu. Proin convallis varius sollicitudin.
-Sed accumsan posuere eros quis placerat. Vestibulum sit amet malesuada elit. Quisque</p>
+						At OMELAS our aim is to offer you clothing that show you that we really care! Not only have we got the trendiest clothes, but we can also guarantee that they are of the finest quality.
+
+						We started as a small business in Uzbekistan, and our aim is to continue providing our customers with products that keep them happy, at prices that keep them happy.
+
+						Our customers are our top priority and through our products we work hard towards building long-lasting and meaningful relations with them.
 				</div>
 				<div class="product-details social-icons">
 					<h4>Share the product <div class="hider"><a href="">+</a></div></h4>
@@ -91,93 +93,45 @@ Sed accumsan posuere eros quis placerat. Vestibulum sit amet malesuada elit. Qui
 				<h2>You MAY ALSO LIKE</h2>
 			</div>
 		<div class="row products" id="box2">
-			<div class="product first-product col-lg-3 col-md-4 col-sm-6 col-xs-12">
-			<figure><img src="{{asset('omelas/img/new-arrival1.jpg') }}" class="img-responsive" ></figure>
-				<div class="star"><p><i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-					<i class="fa fa-star" aria-hidden="true"></i>
-				</p>
-			</div>
-			<h3 class="title-of-item">Zara Collection Outwear
-			</h3>
-			<p class="price">$210</p>
-			<p class="old-price">$328</p>
-		</div>
+			@forelse($products->chunk(4) as $chunk)
+		  @foreach($chunk as $products)
+
 		<div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12">
-		<figure><img src="{{asset('omelas/img/new-arrival2.jpg') }}" class="img-responsive" ></figure>
-			<div class="star"><p><i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-				<i class="fa fa-star" aria-hidden="true"></i>
-			</p>
-		</div>
-		<h3 class="title-of-item">
-		Womens Collection Outwear
-		</h3>
-		<p class="price">$210</p>
-		<p class="old-price">$328</p>
-	</div>
-	<div class="product col-lg-3 col-md-4 col-sm-6 col-xs-12">
-	<figure><img src="{{asset('omelas/img/new-arrival3.jpg') }}" class="img-responsive" ></figure>
-		<div class="star"><p><i class="fa fa-star" aria-hidden="true"></i>
-			<i class="fa fa-star" aria-hidden="true"></i>
-			<i class="fa fa-star" aria-hidden="true"></i>
-			<i class="fa fa-star" aria-hidden="true"></i>
-			<i class="fa fa-star" aria-hidden="true"></i>
-		</p>
-	</div>
-	<h3 class="title-of-item">
-	Brand Clothing Collection</h3>
-	<p class="price">$210</p>
-	<p class="old-price">$328</p>
-</div>
-<div class=" product col-lg-3 col-md-4 col-sm-6 col-xs-12">
-	<figure><img src="{{asset('omelas/img/new-arrival4.jpg') }}" class="img-responsive" ></figure>
-	<div class="star"><p><i class="fa fa-star" aria-hidden="true"></i>
-		<i class="fa fa-star" aria-hidden="true"></i>
-		<i class="fa fa-star" aria-hidden="true"></i>
-		<i class="fa fa-star" aria-hidden="true"></i>
-		<i class="fa fa-star" aria-hidden="true"></i>
-	</p>
-</div>
-<h3 class="title-of-item">
-Outwear With Jacket
-</h3>
-<p class="price">$210</p>
-<p class="old-price">$328</p>
-</div>
+		  <a href="{{route('product',$products->id)}}"><figure><img src="{{url('images', $products->image)}}"
+		    width="221" height="287"
+		    class="img-responsive" ></figure>
+		    <h3 class="title-of-item">{{$products->name}}
+		    </h3>
+		    <p class="price">${{$products->price}}</p>
+		    @if($products->old_price > 0)
+		    <p class="old-price">${{($products->old_price)}}</p>
+		    @endif
+		<!-- add 5$ to new price and becomes old price -->
+		</div></a>
+
+		    <!-- end for loop -->
+
+
+
+		          @endforeach
+		            @empty
+		              <h2 align="center">Emtpy no products</h2>
+		                @endforelse
 </div>
 
 
 <div class="row">
 	<div class="img-big">
 		<div class="card mb-3">
-  <img class="card-img-top" src="{{asset('omelas/img/product2.jpg') }}" alt="Card image cap">
+  <img src="{{url('images', $product->image)}}"
+		width="500" height="auto"
+		alt="Card image cap" class="img-responsive">
   <div class="card-body">
-    <h5 class="card-title">Green Hoodie examples</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. Is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longerThis content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Available 124</small></p>
+    <h5 class="card-title">{{$product->name}}</h5>
+    <p class="card-text">{{$product->description}}</p>
+
   </div>
-</div>
-	<div class="card mb-3">
-  <img class="card-img-top" src="{{asset('omelas/img/product2.jpg') }}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Green Hoodie examples</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. Is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longerThis content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Available 124</small></p>
-  </div>
-</div>
-	<div class="card mb-3">
-  <img class="card-img-top" src="{{asset('omelas/img/product2.jpg') }}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Green Hoodie examples</h5>
-    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. Is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longerThis content is a little bit longer.</p>
-    <p class="card-text"><small class="text-muted">Available 124</small></p>
-  </div>
-</div>
+
 
 	</div>
 </div>
