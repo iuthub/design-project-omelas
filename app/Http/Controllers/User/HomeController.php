@@ -15,6 +15,11 @@ class HomeController extends Controller
       return view('user.index', compact('products'));
 
     }
+
+    public function about_us(){
+      return view('user.about_us');
+    }
+    
     public function products(){
       $products = Product::all();
         return view('user.products', compact('products'));
