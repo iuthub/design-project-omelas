@@ -182,6 +182,7 @@ color: black;
 	text-transform: uppercase;
 	position: relative;
 	margin: 30px 0 80px;
+
 }
 
 .homePage{
@@ -259,12 +260,12 @@ NEW ARRIVIALS
 
 .product{
 	margin-right: -90px;
-	text-align: center;
+	text-align: left;
 	transition: transform .2s;
 }
 
 .product:hover{
-	transform: scale(1.2);
+	transform: scale(1.1);
 }
 .first-product{
 	margin-left: 10%;

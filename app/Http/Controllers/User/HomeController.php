@@ -38,8 +38,9 @@ class HomeController extends Controller
       return view('user.bestsellers');
 
     }
-    public function men(){
-      return view('user.men');
+    public function men(Product $product){
+      $products = Product::all();
+      return view('user.men', compact('products'));
 
     }
     public function women(){
