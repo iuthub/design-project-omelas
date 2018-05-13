@@ -7,7 +7,11 @@
 <ul class="container">
 
   @forelse($products as $product)
+<<<<<<< HEAD
 <li align="left">
+=======
+<li>
+>>>>>>> bc3622f475ec50cdfa608c3896c71e3ca4cafb6d
   <h4>Name of product: {{ $product->name}}</h4>
   <h4>Category:{{count($product->category)?$product->category->name:"N/A"}}</h4>
   <form action="{{route('product.destroy',$product->id)}}"  method="POST">

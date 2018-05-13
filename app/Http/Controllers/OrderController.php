@@ -25,7 +25,11 @@ class OrderController extends Controller
         $order=Order::find($orderId);
 
         if($request->has('delivered')){
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> bc3622f475ec50cdfa608c3896c71e3ca4cafb6d
             $order->delivered=$request->delivered;
         }else{
             $order->delivered="0";
