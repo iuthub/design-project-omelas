@@ -84,6 +84,7 @@ return redirect()->route('admin.index');
      */
     public function edit($id)
     {
+      
         return view('admin.product.edit');
     }
 

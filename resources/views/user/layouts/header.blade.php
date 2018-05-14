@@ -10,11 +10,10 @@
       <div class="offset-4"></div>
 
       <ul class="header-right  col-lg-4 col-sm-6 col-xs-12">
-<<<<<<< HEAD
-      
-=======
+
+
         <a href="{{route('products')}}"><i class="fa fa-product" ></i> Products</a></li>
->>>>>>> 7e6dd5062cf9d20ff72836771402687b3ccf83a1
+
         @guest
             <li><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
             <li><a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a></li>
@@ -30,11 +29,7 @@
                         @csrf
                     </form>
 
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> 7e6dd5062cf9d20ff72836771402687b3ccf83a1
         @endguest
 
 

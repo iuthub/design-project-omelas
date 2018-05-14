@@ -1,0 +1,329 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.2
+-- https://www.phpmyadmin.net/
+--
+-- Хост: localhost:8889
+-- Время создания: Май 13 2018 г., 21:44
+-- Версия сервера: 5.6.35
+-- Версия PHP: 7.1.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- База данных: `omelas`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `addresses`
+--
+
+CREATE TABLE `addresses` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `addressline` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `city` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `state` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `zip` int(11) NOT NULL,
+  `country` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `phone` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `user_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `addresses`
+--
+
+INSERT INTO `addresses` (`id`, `addressline`, `city`, `state`, `zip`, `country`, `phone`, `created_at`, `updated_at`, `user_id`) VALUES
+(1, 'ad', 'ads', 'asd', 90821, 'asd', 909717978, '2018-05-13 04:23:14', '2018-05-13 04:23:14', 1),
+(2, 'asd', 'asd', 'adsa', 12345, 'das', 12334567, '2018-05-13 06:36:07', '2018-05-13 06:36:07', 1),
+(3, 'sdasad', 'sad', 'sada', 12344, 'ads', 1234567, '2018-05-13 06:54:21', '2018-05-13 06:54:21', 1),
+(4, 'sdasad', 'sad', 'sada', 12344, 'ads', 1234567, '2018-05-13 06:54:55', '2018-05-13 06:54:55', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `created_at`, `updated_at`) VALUES
+(1, 'Men', '2018-05-10 01:07:18', '2018-05-10 01:07:18'),
+(2, 'Women', '2018-05-10 01:07:22', '2018-05-10 01:07:22');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '2014_10_12_000000_create_users_table', 1),
+(2, '2014_10_12_100000_create_password_resets_table', 1),
+(3, '2018_05_04_181232_create_products_table', 1),
+(4, '2018_05_04_181747_create_categories_table', 1),
+(5, '2018_05_06_092635_add_admin_column_to_users', 1),
+(6, '2018_05_06_111032_create_addresses_table', 1),
+(7, '2018_05_06_112537_add_user_id_to_address_table_new', 1),
+(8, '2018_05_07_095107_create_orders_table', 1),
+(9, '2018_05_07_095357_create_order_product_table', 1),
+(10, '2018_05_12_200019_create_shoppingcart_table', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `orders`
+--
+
+CREATE TABLE `orders` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `total` int(11) NOT NULL,
+  `delivered` tinyint(4) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `orders`
+--
+
+INSERT INTO `orders` (`id`, `user_id`, `total`, `delivered`, `created_at`, `updated_at`) VALUES
+(1, 1, 100, 0, '2018-05-13 04:23:50', '2018-05-13 06:34:32'),
+(2, 1, 200, 0, '2018-05-13 06:36:18', '2018-05-13 06:36:18');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `order_product`
+--
+
+CREATE TABLE `order_product` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `qty` int(11) NOT NULL,
+  `total` double(8,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `order_product`
+--
+
+INSERT INTO `order_product` (`id`, `product_id`, `order_id`, `qty`, `total`, `created_at`, `updated_at`) VALUES
+(1, 4, 1, 1, 100.00, NULL, NULL),
+(2, 8, 2, 1, 200.00, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `token` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('admin@admin.com', '$2y$10$Yxm6Q0wc9IdQ73.RKB7Gj.mVllbPGHbwAGnPQOjJdodevWqUKGyXG', '2018-05-13 06:20:11');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `products`
+--
+
+CREATE TABLE `products` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `size` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `price` int(11) NOT NULL,
+  `old_price` int(11) DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `category_id` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `products`
+--
+
+INSERT INTO `products` (`id`, `name`, `description`, `size`, `price`, `old_price`, `image`, `category_id`, `created_at`, `updated_at`) VALUES
+(8, 'White blause', 'Cotton made white blause', 'medium', 200, NULL, 'Outwear.jpg', 2, '2018-05-13 06:30:18', '2018-05-13 06:30:18'),
+(9, 'Flower Dress', 'Medium long flower dress', 'small', 300, NULL, 'new-arrival22.jpg', 2, '2018-05-13 06:32:48', '2018-05-13 06:32:48'),
+(10, 'Brown Dress', 'Long Brown dress', 'medium', 350, NULL, 'new-arrival3.jpg', 2, '2018-05-13 06:34:04', '2018-05-13 06:34:04'),
+(11, 'School uniform', 'School uniform for girls', 'medium', 250, NULL, 'new-arrival4.jpg', 2, '2018-05-13 06:35:11', '2018-05-13 06:35:11'),
+(12, 'Black Suit', 'Black suit for ceremony', 'large', 500, NULL, 'new3.png', 1, '2018-05-13 06:39:17', '2018-05-13 06:39:17'),
+(13, 'Grey Smoking', 'Grey Smoking made by cotton', 'large', 500, NULL, 'menswear.png', 1, '2018-05-13 06:40:26', '2018-05-13 06:40:26'),
+(14, 'Sweater', 'Comfortable men\'s Sweater', 'medium', 380, NULL, 'new1.png', 1, '2018-05-13 06:41:45', '2018-05-13 06:41:45'),
+(15, 'Sweater OA', 'Black colored sweater', 'medium', 420, NULL, 'new4.png', 1, '2018-05-13 06:43:33', '2018-05-13 06:43:33');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `shoppingcart`
+--
+
+CREATE TABLE `shoppingcart` (
+  `identifier` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `instance` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `remember_token` varchar(100) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `admin` tinyint(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Дамп данных таблицы `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `admin`) VALUES
+(1, 'Super Admin', 'admin@admin.com', '$2y$10$Zrf7BPfok775bYPUW7ycnuWDlNGxTKhnxjpcS6v5.nEy02E9rLk7K', 'X6CFuGuWlSS9MBlKJpzBgF1w9xYB3N7yRnjDF8cdoqNjDZbmux58cSHPtrkw', '2018-05-10 01:05:22', '2018-05-10 01:05:22', 1);
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `addresses`
+--
+ALTER TABLE `addresses`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `order_product`
+--
+ALTER TABLE `order_product`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Индексы таблицы `products`
+--
+ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `shoppingcart`
+--
+ALTER TABLE `shoppingcart`
+  ADD PRIMARY KEY (`identifier`,`instance`);
+
+--
+-- Индексы таблицы `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `addresses`
+--
+ALTER TABLE `addresses`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT для таблицы `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT для таблицы `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT для таблицы `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT для таблицы `order_product`
+--
+ALTER TABLE `order_product`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT для таблицы `products`
+--
+ALTER TABLE `products`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT для таблицы `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
